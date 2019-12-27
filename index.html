@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fcdbb5efb6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <nav class="menu navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand shopping" href="#">Shopping Card</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav d-flex justify-content-between">
+                <div class="d-flex">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </div> 
+                <div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Account
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Setting</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </li>
+                </div>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100"
+                    src="https://www.waldengalleria.com/wp-content/uploads/sites/3/2019/11/Shopping_Blog-Feature-Image.jpg"
+                    alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100"
+                    src="https://www.waldengalleria.com/wp-content/uploads/sites/3/2019/11/Shopping_Blog-Feature-Image.jpg"
+                    alt="Second slide">
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+        <div class="container">
+            <div class="special row ">
+              <div class="col justify-content-start">
+                <i class="fas fa-shopping-cart">
+                Shopping Bag Total : <span class="total">0$</span></i>
+              </div>
+
+            </div>
+            <div class="others row">
+              <div class="col justify-content-around">
+                <i  class="fas fa-times fa-2x remove"></i>
+                 <i   class="fas fa-heart fa-2x love "></i>
+              </div>
+              <div class="col">
+                <img height="180" width="190" src="http://www.uni-gabions.fr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/p/spadri_adidas_original-484dkv.jpg">
+              </div>
+              <div class="col">
+                Sbedri white
+              </div>
+              <div class="col justify-content-around">
+                <i class="fas fa-plus"></i>
+                <span class="quantity">0</span>
+                <i class="fas fa-minus"></i>
+                
+              </div>
+              <div class="col price">
+                120$
+              </div>
+            </div>
+
+            <div class="others row">
+                <div class="col justify-content-around">
+                  <i  class="fas fa-times fa-2x remove"></i>
+                  <i  class="fas fa-heart fa-2x love"></i>
+                </div>
+                <div class="col">
+                    <img height="180" width="190" src="data:image/jpeg;base64,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">
+                </div>
+                <div class="col">
+                  Klasset
+                </div>
+                <div class="col justify-content-around">
+                  <i class="fas fa-plus"></i>
+                  <span class="quantity">0</span>
+                <i class="fas fa-minus"></i>
+                </div>
+                <div class="col price">
+                  20$
+                </div>
+              </div>
+
+              <div class="others row">
+                <div class="col justify-content-around">
+                  <i  class="fas fa-times fa-2x remove"></i>
+                  <i  class="fas fa-heart fa-2x love "></i>
+                </div>
+                <div class="col">
+                    <img height="180" width="190" src="https://ae01.alicdn.com/kf/HTB1LgXjlRHH8KJjy0Fbq6AqlpXah/Mode-Mickey-femme-sac-dos-Nylon-noir-Grils-cole-sac-dos-mini-voyage-sac-dos-enfants.jpg">
+                </div>
+                <div class="col">
+                  Kartaba
+                </div>
+                <div class="col justify-content-around">
+                  <i class="fas fa-plus"></i>
+                <span class="quantity">0</span>
+                 <i class="fas fa-minus"></i>
+                </div>
+                <div class="col price">
+                  80$
+                </div>
+              </div>
+          </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+            <script src="script.js"></script>
+</body>
+
+</html>
